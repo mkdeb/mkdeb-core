@@ -9,18 +9,18 @@ fi
 # Required-Stop:     $remote_fs $syslog
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: Prometheus exporter for consul
-# Description:       Prometheus exporter for consul
+# Short-Description: Prometheus exporter for Consul
+# Description:       Prometheus exporter for Consul
 ### END INIT INFO
 
 NAME="prometheus-consul-exporter"
-DESC="Prometheus exporter for consul"
+DESC="Prometheus exporter for Consul"
 USER="prometheus"
 GROUP="prometheus"
 
 [ -r /etc/default/$NAME ] && . /etc/default/$NAME
 
-DAEMON=/usr/bin/consul_exporter
+DAEMON=/usr/bin/$NAME
 
 LOGFILE="/var/log/prometheus/consul-exporter.log"
 PIDFILE="/var/run/prometheus/consul-exporter.pid"

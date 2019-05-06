@@ -2,16 +2,20 @@
 version: 1
 
 name: prometheus-redis-exporter
-description: Prometheus Redis exporter
+description: Prometheus exporter for Redis
 homepage: https://github.com/oliver006/redis_exporter
 
-maintainer: Guillaume Durand <guillaume.durand@happn.com>
+maintainer: Recipes Maintainers <recipes@mkdeb.sh>
 
 source:
   url: https://github.com/oliver006/redis_exporter/releases/download/v{{ .Version }}/redis_exporter-v{{ .Version }}.linux-{{ .Arch }}.tar.gz
   strip: 1
   arch-mapping:
     amd64: amd64
+    arm64: arm64
+    armel: armv6
+    armhf: armv7
+    i386: "386"
 
 control:
   depends:
@@ -19,7 +23,7 @@ control:
   - daemon
   - libc6
   description: |
-    Prometheus exporter for Redis
+    Prometheus exporter for Redis metrics.
   section: net
 
 install:
@@ -35,9 +39,10 @@ install:
   upstream:
     /usr/bin:
     - pattern: redis_exporter
+      rename: prometheus-redis-exporter
 
 dirs:
-- /var/lib/prometheus
+- /var/lib/prometheus/redis-exporter
 - /var/log/prometheus
 
 # vim: ts=2 sw=2 et

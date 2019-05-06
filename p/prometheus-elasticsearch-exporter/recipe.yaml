@@ -2,8 +2,8 @@
 version: 1
 
 name: prometheus-elasticsearch-exporter
-description: Prometheus exporter for Elasticsearch metrics
-homepage: https://prometheus.io/
+description: Prometheus exporter for Elasticsearch
+homepage: https://github.com/justwatchcom/elasticsearch_exporter
 
 maintainer: Recipes Maintainers <recipes@mkdeb.sh>
 
@@ -24,7 +24,7 @@ control:
   - libc6
   description: |
     Simple server that scrapes Elasticsearch stats and exports them via HTTP for
-    Prometheus consumption
+    Prometheus consumption.
   section: net
 
 install:
@@ -43,7 +43,7 @@ install:
       rename: prometheus-elasticsearch-exporter
 
 dirs:
-- /var/lib/prometheus
+- /var/lib/prometheus/elasticsearch-exporter
 - /var/log/prometheus
 
 # vim: ts=2 sw=2 et

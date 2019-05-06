@@ -9,18 +9,18 @@ fi
 # Required-Stop:     $remote_fs $syslog
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: Prometheus exporter for mysql
-# Description:       Prometheus exporter for mysql
+# Short-Description: Prometheus exporter for MySQL
+# Description:       Prometheus exporter for MySQL
 ### END INIT INFO
 
 NAME="prometheus-mysqld-exporter"
-DESC="Prometheus exporter for mysql"
+DESC="Prometheus exporter for MySQL"
 USER="prometheus"
 GROUP="prometheus"
 
 [ -r /etc/default/$NAME ] && . /etc/default/$NAME
 
-DAEMON=/usr/bin/mysqld_exporter
+DAEMON=/usr/bin/$NAME
 
 LOGFILE="/var/log/prometheus/mysql-exporter.log"
 PIDFILE="/var/run/prometheus/mysql-exporter.pid"

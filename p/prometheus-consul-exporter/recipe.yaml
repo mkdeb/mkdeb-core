@@ -19,8 +19,7 @@ source:
 
 control:
   description: |
-    Prometheus exporter for Consul,
-    export Consul service health to Prometheus.
+    Export Consul service health to Prometheus.
   section: net
 
 install:
@@ -32,6 +31,7 @@ install:
   upstream:
     /usr/bin:
     - pattern: consul_exporter
+      rename: prometheus-consul-exporter
 
 dirs:
 - /var/log/prometheus

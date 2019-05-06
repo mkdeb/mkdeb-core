@@ -20,8 +20,7 @@ control:
   - daemon
   - libc6
   description: |
-    Prometheus exporter for Varnish,
-    written in Go with pluggable metric collectors.
+    Prometheus exporter for varnishstat metrics.
   section: net
 
 install:
@@ -40,7 +39,7 @@ install:
       rename: prometheus-varnish-exporter
 
 dirs:
+- /var/lib/prometheus/varnish-exporter
 - /var/log/prometheus
-- /var/lib/prometheus
 
 # vim: ts=2 sw=2 et

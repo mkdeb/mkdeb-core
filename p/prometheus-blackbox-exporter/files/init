@@ -9,18 +9,18 @@ fi
 # Required-Stop:     $remote_fs $syslog
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: Prometheus exporter for blackbox
-# Description:       Prometheus exporter for blackbox
+# Short-Description: Prometheus exporter for blackbox probing
+# Description:       Prometheus exporter for blackbox probing
 ### END INIT INFO
 
 NAME="prometheus-blackbox-exporter"
-DESC="Prometheus exporter for blackbox"
+DESC="Prometheus exporter for blackbox probing"
 USER="prometheus"
 GROUP="prometheus"
 
 [ -r /etc/default/$NAME ] && . /etc/default/$NAME
 
-DAEMON=/usr/bin/blackbox_exporter
+DAEMON=/usr/bin/$NAME
 
 LOGFILE="/var/log/prometheus/blackbox-exporter.log"
 PIDFILE="/var/run/prometheus/blackbox-exporter.pid"

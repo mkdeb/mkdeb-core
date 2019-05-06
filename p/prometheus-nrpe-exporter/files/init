@@ -9,12 +9,12 @@ fi
 # Required-Stop:     $remote_fs $syslog
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: Prometheus NRPE exporter
-# Description:       Prometheus NRPE exporter
+# Short-Description: Prometheus exporter for NRPE
+# Description:       Prometheus exporter for NRPE
 ### END INIT INFO
 
 NAME="prometheus-nrpe-exporter"
-DESC="Prometheus NRPE exporter"
+DESC="Prometheus exporter for NRPE"
 USER="prometheus"
 GROUP="prometheus"
 

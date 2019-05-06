@@ -9,12 +9,12 @@ fi
 # Required-Stop:     $remote_fs $syslog
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: Prometheus exporter for Elasticsearch metrics
-# Description:       Prometheus exporter for Elasticsearch metrics
+# Short-Description: Prometheus exporter for Elasticsearch
+# Description:       Prometheus exporter for Elasticsearch
 ### END INIT INFO
 
 NAME="prometheus-elasticsearch-exporter"
-DESC="Prometheus exporter for Elasticsearch metrics"
+DESC="Prometheus exporter for Elasticsearch"
 USER="prometheus"
 GROUP="prometheus"
 

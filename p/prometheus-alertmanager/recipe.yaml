@@ -48,6 +48,7 @@ install:
       conffile: true
     /usr/bin:
     - pattern: alertmanager
+      rename: prometheus-alertmanager
     - pattern: amtool
 
 dirs:

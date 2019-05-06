@@ -3,7 +3,7 @@ version: 1
 
 name: prometheus-node-exporter
 description: Prometheus exporter for machine metrics
-homepage: https://prometheus.io/
+homepage: https://github.com/prometheus/node_exporter
 
 maintainer: Recipes Maintainers <recipes@mkdeb.sh>
 
@@ -40,6 +40,7 @@ install:
   upstream:
     /usr/bin:
     - pattern: node_exporter
+      rename: prometheus-node-exporter
 
 dirs:
 - /var/lib/prometheus/node-exporter

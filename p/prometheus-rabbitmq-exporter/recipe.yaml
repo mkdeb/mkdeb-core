@@ -2,7 +2,7 @@
 version: 1
 
 name: prometheus-rabbitmq-exporter
-description: Prometheus exporter for rabbitmq
+description: Prometheus exporter for RabbitMQ
 homepage: https://github.com/kbudde/rabbitmq_exporter
 
 maintainer: Recipes Maintainers <recipes@mkdeb.sh>
@@ -16,8 +16,7 @@ source:
 
 control:
   description: |
-    Prometheus exporter for rabbitmq,
-    written in Go with pluggable metric collectors.
+    Prometheus exporter for RabbitMQ metrics.
   section: net
 
 install:
@@ -33,6 +32,7 @@ install:
   upstream:
     /usr/bin:
     - pattern: rabbitmq_exporter
+      rename: prometheus-rabbitmq-exporter
 
 dirs:
 - /var/log/prometheus

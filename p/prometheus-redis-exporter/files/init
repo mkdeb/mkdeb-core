@@ -9,18 +9,18 @@ fi
 # Required-Stop:     $remote_fs $syslog
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: Prometheus Redis exporter
-# Description:       Prometheus Redis exporter
+# Short-Description: Prometheus exporter for Redis
+# Description:       Prometheus exporter for Redis
 ### END INIT INFO
 
 NAME="prometheus-redis-exporter"
-DESC="Prometheus Redis exporter"
+DESC="Prometheus exporter for Redis"
 USER="prometheus"
 GROUP="prometheus"
 
 [ -r /etc/default/$NAME ] && . /etc/default/$NAME
 
-DAEMON=/usr/bin/redis_exporter
+DAEMON=/usr/bin/$NAME
 
 LOGFILE="/var/log/prometheus/redis-exporter.log"
 PIDFILE="/var/run/prometheus/redis-exporter.pid"

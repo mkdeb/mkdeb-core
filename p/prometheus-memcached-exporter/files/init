@@ -9,18 +9,18 @@ fi
 # Required-Stop:     $remote_fs $syslog
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: Prometheus exporter for memcached
-# Description:       Prometheus exporter for memcached
+# Short-Description: Prometheus exporter for Memcached
+# Description:       Prometheus exporter for Memcached
 ### END INIT INFO
 
 NAME="prometheus-memcached-exporter"
-DESC="Prometheus exporter for memcached"
+DESC="Prometheus exporter for Memcached"
 USER="prometheus"
 GROUP="prometheus"
 
 [ -r /etc/default/$NAME ] && . /etc/default/$NAME
 
-DAEMON=/usr/bin/memcached_exporter
+DAEMON=/usr/bin/$NAME
 
 LOGFILE="/var/log/prometheus/memcached-exporter.log"
 PIDFILE="/var/run/prometheus/memcached-exporter.pid"

@@ -9,18 +9,18 @@ fi
 # Required-Stop:     $remote_fs $syslog
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: Prometheus exporter for rabbitmq
-# Description:       Prometheus exporter for rabbitmq
+# Short-Description: Prometheus exporter for RabbitMQ
+# Description:       Prometheus exporter for RabbitMQ
 ### END INIT INFO
 
 NAME="prometheus-rabbitmq-exporter"
-DESC="Prometheus exporter for rabbitmq"
+DESC="Prometheus exporter for RabbitMQ"
 USER="prometheus"
 GROUP="prometheus"
 
 [ -r /etc/default/$NAME ] && . /etc/default/$NAME
 
-DAEMON=/usr/bin/rabbitmq_exporter
+DAEMON=/usr/bin/$NAME
 
 LOGFILE="/var/log/prometheus/rabbitmq-exporter.log"
 PIDFILE="/var/run/prometheus/rabbitmq-exporter.pid"

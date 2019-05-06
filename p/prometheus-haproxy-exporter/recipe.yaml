@@ -2,8 +2,8 @@
 version: 1
 
 name: prometheus-haproxy-exporter
-description: Prometheus exporter for HAProxy metrics
-homepage: https://prometheus.io/
+description: Prometheus exporter for HAProxy
+homepage: https://github.com/prometheus/haproxy_exporter
 
 maintainer: Recipes Maintainers <recipes@mkdeb.sh>
 
@@ -24,7 +24,7 @@ control:
   - libc6
   description: |
     Simple server that scrapes HAProxy stats and exports them via HTTP for
-    Prometheus consumption
+    Prometheus consumption.
   section: net
 
 install:
@@ -40,6 +40,7 @@ install:
   upstream:
     /usr/bin:
     - pattern: haproxy_exporter
+      rename: prometheus-haproxy-exporter
 
 dirs:
 - /var/lib/prometheus/haproxy-exporter

@@ -20,7 +20,7 @@ GROUP="prometheus"
 
 [ -r /etc/default/$NAME ] && . /etc/default/$NAME
 
-DAEMON=/usr/bin/node_exporter
+DAEMON=/usr/bin/$NAME
 
 LOGFILE="/var/log/prometheus/node-exporter.log"
 PIDFILE="/var/run/prometheus/node-exporter.pid"

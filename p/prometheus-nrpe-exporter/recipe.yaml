@@ -2,8 +2,8 @@
 version: 1
 
 name: prometheus-nrpe-exporter
-description: Prometheus NRPE exporter
-homepage: https://prometheus.io/
+description: Prometheus exporter for NRPE
+homepage: https://github.com/RobustPerception/nrpe_exporter
 
 maintainer: Recipes Maintainers <recipes@mkdeb.sh>
 
@@ -12,6 +12,10 @@ source:
   strip: 1
   arch-mapping:
     amd64: amd64
+    arm64: arm64
+    armel: armv6
+    armhf: armv7
+    i386: "386"
 
 control:
   depends:
@@ -19,7 +23,8 @@ control:
   - daemon
   - libc6
   description: |
-    Prometheus exporter for nrpe
+    The NRPE exporter exposes metrics on commands sent to a running NRPE
+    daemon.
   section: net
 
 install:
@@ -35,9 +40,10 @@ install:
   upstream:
     /usr/bin:
     - pattern: nrpe_exporter
+      rename: prometheus-nrpe-exporter
 
 dirs:
-- /var/lib/prometheus
+- /var/lib/prometheus/nrpe-exporter
 - /var/log/prometheus
 
 # vim: ts=2 sw=2 et

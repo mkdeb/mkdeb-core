@@ -2,8 +2,8 @@
 version: 1
 
 name: prometheus-memcached-exporter
-description: Prometheus exporter for memcached
-homepage: https://prometheus.io/
+description: Prometheus exporter for Memcached
+homepage: https://github.com/prometheus/memcached_exporter
 
 maintainer: Recipes Maintainers <recipes@mkdeb.sh>
 
@@ -23,8 +23,8 @@ control:
   - daemon
   - libc6
   description: |
-    Prometheus exporter for memcached,
-    written in Go with pluggable metric collectors.
+    Memcached exporter exports metrics from Memcached servers for
+    consumption by Prometheus.
   section: net
 
 install:
@@ -40,6 +40,7 @@ install:
   upstream:
     /usr/bin:
     - pattern: memcached_exporter
+      rename: prometheus-memcached-exporter
 
 dirs:
 - /var/lib/prometheus/memcached-exporter

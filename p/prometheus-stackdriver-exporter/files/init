@@ -9,12 +9,12 @@ fi
 # Required-Stop:     $remote_fs $syslog
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: Prometheus exporter for stackdriver
-# Description:       Prometheus exporter for stackdriver
+# Short-Description: Prometheus exporter for Stackdriver
+# Description:       Prometheus exporter for Stackdriver
 ### END INIT INFO
 
 NAME="prometheus-stackdriver-exporter"
-DESC="Prometheus exporter for stackdriver"
+DESC="Prometheus exporter for Stackdriver"
 USER="prometheus"
 GROUP="prometheus"
 

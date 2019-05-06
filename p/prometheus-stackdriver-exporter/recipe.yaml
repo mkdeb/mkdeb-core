@@ -2,22 +2,29 @@
 version: 1
 
 name: prometheus-stackdriver-exporter
-description: Prometheus exporter for stackdriver
-homepage: https://prometheus.io/
+description: Prometheus exporter for Stackdriver
+homepage: https://github.com/frodenas/stackdriver_exporter
 
 maintainer: Recipes Maintainers <recipes@mkdeb.sh>
 
 source:
-  url: https://github.com/frodenas/stackdriver_exporter/releases/download/v{{ .Version }}/stackdriver_exporter-{{ .Version }}.linux-amd64.tar.gz
+  url: https://github.com/frodenas/stackdriver_exporter/releases/download/v{{ .Version }}/stackdriver_exporter-{{ .Version }}.linux-{{ .Arch }}.tar.gz
   strip: 1
+  arch-mapping:
+    amd64: amd64
+    arm64: arm64
+    armel: armv6
+    armhf: armv7
+    i386: "386"
 
 control:
   depends:
   - adduser
   - libc6
-
   description: |
-    Prometheus exporter for stackdriver
+    A Prometheus exporter for Google Stackdriver Monitoring metrics. It
+    acts as a proxy that requests Stackdriver API for the metric's
+    time-series everytime prometheus scrapes it.
   section: net
 
 install:
@@ -36,6 +43,7 @@ install:
       rename: prometheus-stackdriver-exporter
 
 dirs:
+- /var/lib/prometheus/stackdriver-exporter
 - /var/log/prometheus
 
 # vim: ts=2 sw=2 et

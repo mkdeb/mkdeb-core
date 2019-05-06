@@ -9,18 +9,18 @@ fi
 # Required-Stop:     $remote_fs $syslog
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: Prometheus exporter for HAProxy metrics
-# Description:       Prometheus exporter for HAProxy metrics
+# Short-Description: Prometheus exporter for HAProxy
+# Description:       Prometheus exporter for HAProxy
 ### END INIT INFO
 
 NAME="prometheus-haproxy-exporter"
-DESC="Prometheus exporter for HAProxy metrics"
+DESC="Prometheus exporter for HAProxy"
 USER="prometheus"
 GROUP="prometheus"
 
 [ -r /etc/default/$NAME ] && . /etc/default/$NAME
 
-DAEMON=/usr/bin/haproxy_exporter
+DAEMON=/usr/bin/$NAME
 
 LOGFILE="/var/log/prometheus/haproxy-exporter.log"
 PIDFILE="/var/run/prometheus/haproxy-exporter.pid"
