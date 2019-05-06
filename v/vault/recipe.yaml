@@ -2,7 +2,7 @@
 version: 1
 
 name: vault
-description: secrets management tool
+description: Secrets management tool
 homepage: https://www.vaultproject.io/
 
 maintainer: Recipes Maintainers <recipes@mkdeb.sh>
@@ -37,7 +37,7 @@ control:
        Any dynamically-generated secrets are associated with leases,
        and Vault will automatically revoke these secrets after the
        lease period ends. Access control policies provide strict
-       control over who can access what secrets. 
+       control over who can access what secrets.
 
      * Key Rolling: Secrets you store within Vault can be updated at
        any time. If using Vault's encryption-as-a-service

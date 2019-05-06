@@ -2,7 +2,7 @@
 version: 1
 
 name: mkdeb
-description: the Debian packaging helper
+description: Debian packaging helper
 homepage: https://mkdeb.sh/
 
 maintainer: Recipes Maintainers <recipes@mkdeb.sh>
@@ -20,7 +20,8 @@ control:
   - ca-certificates
   - libc6
   description: |
-    mkdeb provides a convenient way to generate Debian packages from upstream release archives.
+    mkdeb provides a convenient way to generate Debian packages from
+    upstream release archives.
   section: devel
 
 install:

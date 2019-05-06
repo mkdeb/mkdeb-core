@@ -2,7 +2,7 @@
 version: 1
 
 name: consul
-description: service discovery and configuration tool
+description: Service discovery and configuration tool
 homepage: https://consul.io/
 
 maintainer: Recipes Maintainers <recipes@mkdeb.sh>

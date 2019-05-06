@@ -2,7 +2,7 @@
 version: 1
 
 name: prometheus
-description: monitoring system and time series database
+description: Monitoring system and time series database
 homepage: https://prometheus.io/
 
 maintainer: Recipes Maintainers <recipes@mkdeb.sh>
